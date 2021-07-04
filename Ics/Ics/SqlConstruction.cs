@@ -11,7 +11,7 @@ namespace Ics
 {
     class SqlConstruction
     {
-        static string dir = Path.Combine("E:", "data", "school", "ICSystem", "data");
+        static string dir = Path.Combine("..","..", "..", "..", "..", "data");
         public static int Construction(string connStr, string opt)
         {
             // SQL処理で用いる変数を予め宣言
@@ -41,8 +41,8 @@ namespace Ics
                                 "ap_floor int," +
                                 "ap_x float," +
                                 "ap_y float," +
-                                "ap_y_floor float," +
-                                "ap_y_height float," +
+                                "ap_z_floor float," +
+                                "ap_z_height float," +
                                 "CONSTRAINT ap_pkc PRIMARY KEY (id));", conn);
                             cmd.ExecuteNonQuery();
 
@@ -51,8 +51,8 @@ namespace Ics
                                 "ap_floor," +
                                 "ap_x," +
                                 "ap_y," +
-                                "ap_y_floor," +
-                                "ap_y_height) FROM STDIN WITH CSV HEADER"))
+                                "ap_z_floor," +
+                                "ap_z_height) FROM STDIN WITH CSV HEADER"))
                             {
                                 writer.Write(File.ReadAllText(apFile, Encoding.GetEncoding("UTF-8")));
                             }
@@ -84,8 +84,8 @@ namespace Ics
                                 "location varchar," +
                                 "location_x float," +
                                 "location_y float," +
-                                "location_y_floor float," +
-                                "location_y_height float," +
+                                "location_z_floor float," +
+                                "location_z_height float," +
                                 "CONSTRAINT location_pkc PRIMARY KEY (id));", conn);
                             cmd.ExecuteNonQuery();
 
@@ -96,8 +96,8 @@ namespace Ics
                                 "location," +
                                 "location_x," +
                                 "location_y," +
-                                "location_y_floor," +
-                                "location_y_height) FROM STDIN WITH CSV HEADER"))
+                                "location_z_floor," +
+                                "location_z_height) FROM STDIN WITH CSV HEADER"))
                             {
                                 writer.Write(File.ReadAllText(locationFile, Encoding.GetEncoding("UTF-8")));
                             }
@@ -109,8 +109,8 @@ namespace Ics
                                 "location," +
                                 "location_x," +
                                 "location_y," +
-                                "location_y_floor," +
-                                "location_y_height) FROM STDIN WITH CSV HEADER"))
+                                "location_z_floor," +
+                                "location_z_height) FROM STDIN WITH CSV HEADER"))
                             {
                                 writer.Write(File.ReadAllText(locationFile, Encoding.GetEncoding("UTF-8")));
                             }
@@ -187,8 +187,8 @@ namespace Ics
                             cmd = new NpgsqlCommand("DROP TABLE IF EXISTS ics_table;" +
                                 "CREATE TABLE ics_table AS " +
                                 "SELECT measured_table.location_floor, measured_table.location, measured_table.ave_dBm, measured_table.med_dBm, measured_table.center_freq_MHz, measured_table.counts_per_100, measured_table.ap_name," +
-                                "location_table.location_x, location_table.location_y, location_table.location_y_floor, location_table.location_y_height," +
-                                "ap_table.ap_floor, ap_table.ap_x, ap_table.ap_y, ap_table.ap_y_floor, ap_table.ap_y_height " +
+                                "location_table.location_x, location_table.location_y, location_table.location_z_floor, location_table.location_z_height," +
+                                "ap_table.ap_floor, ap_table.ap_x, ap_table.ap_y, ap_table.ap_z_floor, ap_table.ap_z_height " +
                                 "FROM measured_table, location_table, ap_table " +
                                 "WHERE ap_table.id < 63 " +
                                 "AND measured_table.location_floor = location_table.location_floor " +
