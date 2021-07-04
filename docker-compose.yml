@@ -1,0 +1,19 @@
+version: '3'
+volumes:
+  pgdata:
+    driver: "local"
+services:
+  postgis:
+    build: .
+    container_name: ics
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=ics_db
+      - POSTGRES_USER=docker
+      - POSTGRES_PASS=docker
+      - ALLOW_IP_RANGE=0.0.0.0/0
+      - POSTGRES_MULTIPLE_EXTENSIONS=postgis,hstore,postgis_topology
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+    shm_size: 1gb
