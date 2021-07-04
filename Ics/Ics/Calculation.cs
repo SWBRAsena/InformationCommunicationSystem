@@ -34,8 +34,8 @@ namespace Ics
                         if (reader.Read())
                         {
                             double d = Distance(reader.GetDouble(0), reader.GetInt32(1));
-                            Console.WriteLine($"RSSI = {reader.GetDouble(0)}, fs = {reader.GetInt32(1)}");
-                            Console.WriteLine($"location [a] in ({reader.GetDouble(2)}, {reader.GetDouble(3)}) ,nearest AP [{reader.GetString(4)}] in ({reader.GetDouble(5)}, {reader.GetDouble(6)}), Distance is {d}");
+                            Console.WriteLine($" RSSI = {reader.GetDouble(0)}, fs = {reader.GetInt32(1)}");
+                            Console.WriteLine($" location [a] in ({reader.GetDouble(2)}, {reader.GetDouble(3)}) ,nearest AP [{reader.GetString(4)}] in ({reader.GetDouble(5)}, {reader.GetDouble(6)}), Distance is {d} m.");
                         }
                     }
                 }

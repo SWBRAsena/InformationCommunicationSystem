@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\data\\school\\ICSystem\\Ics\\Ics\\Ics.csproj": {}
+    "E:\\data\\school\\InformationCommunicationSystem\\Ics\\Ics\\Ics.csproj": {}
   },
   "projects": {
-    "E:\\data\\school\\ICSystem\\Ics\\Ics\\Ics.csproj": {
+    "E:\\data\\school\\InformationCommunicationSystem\\Ics\\Ics\\Ics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\data\\school\\ICSystem\\Ics\\Ics\\Ics.csproj",
+        "projectUniqueName": "E:\\data\\school\\InformationCommunicationSystem\\Ics\\Ics\\Ics.csproj",
         "projectName": "Ics",
-        "projectPath": "E:\\data\\school\\ICSystem\\Ics\\Ics\\Ics.csproj",
+        "projectPath": "E:\\data\\school\\InformationCommunicationSystem\\Ics\\Ics\\Ics.csproj",
         "packagesPath": "C:\\Users\\mo_wo\\.nuget\\packages\\",
-        "outputPath": "E:\\data\\school\\ICSystem\\Ics\\Ics\\obj\\",
+        "outputPath": "E:\\data\\school\\InformationCommunicationSystem\\Ics\\Ics\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k+jS6BZBEghXCe1m5HjR5LWs63VYs+YIgX9RbUMQbHWG1EwTsf1MlIr7OG0eXqI/UCcXoiS7enYkiYfhjyCDig==",
+  "dgSpecHash": "TT8vnvIxrKCSmeVba0rKig+04trCHd6tPc9ytXuFry2lgkSVKjBRtHCd0KC8wjOF+kqMGC8W5zpDT6uwviK6ag==",
   "success": true,
-  "projectFilePath": "E:\\data\\school\\ICSystem\\Ics\\Ics\\Ics.csproj",
+  "projectFilePath": "E:\\data\\school\\InformationCommunicationSystem\\Ics\\Ics\\Ics.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mo_wo\\.nuget\\packages\\npgsql\\5.0.7\\npgsql.5.0.7.nupkg.sha512",
     "C:\\Users\\mo_wo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
